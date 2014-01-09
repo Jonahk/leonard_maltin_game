@@ -1,6 +1,6 @@
-class CreateNames < ActiveRecord::Migration
+class CreateActors < ActiveRecord::Migration
   def change
-    create_table :names do |t|
+    create_table :actors do |t|
       t.string :name, null:false
       t.integer :movie_id, null:false
       t.integer :index, null:false

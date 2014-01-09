@@ -16,6 +16,14 @@ ActiveRecord::Schema.define(version: 20131224161629) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "actors", force: true do |t|
+    t.string   "name",       null: false
+    t.integer  "movie_id",   null: false
+    t.integer  "index",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "categories", force: true do |t|
     t.string   "name",       null: false
     t.datetime "created_at"
@@ -27,14 +35,6 @@ ActiveRecord::Schema.define(version: 20131224161629) do
     t.integer  "year",        null: false
     t.text     "clues",       null: false
     t.integer  "category_id", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "names", force: true do |t|
-    t.string   "name",       null: false
-    t.integer  "movie_id",   null: false
-    t.integer  "index",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
