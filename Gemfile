@@ -36,6 +36,20 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+group :development, :test do
+      gem "rspec-rails" 
+      gem 'factory_girl_rails'
+      gem "valid_attribute"
+      gem "shoulda-matchers"
+      gem "capybara"
+      gem "launchy"
+      gem "simple_form"
+      gem "pry-rails"
+end
+  group :staging, :production do
+    gem 'rails_12factor'
+  end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

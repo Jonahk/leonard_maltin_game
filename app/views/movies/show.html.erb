@@ -1,0 +1,13 @@
+<h1>Clues</h1>
+
+<% @movie.clues.split("\n").each do |clue| %>
+  <p><%= clue %></p>
+<% end %>
+
+
+<h1>Names</h1>
+<ul>
+<% @movie.actors.each do |actor| %>
+  <li><%= name %>
+<% end %>
+</ul>
