@@ -1,0 +1,1 @@
+json.array! @category.movies, :id, :year

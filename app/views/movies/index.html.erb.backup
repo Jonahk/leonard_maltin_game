@@ -1,0 +1,74 @@
+<div id="choose_category">
+<p>Please Choose a Category:</p>
+<ul id="category_list">
+</ul>
+</div>
+
+<div id="choose_year" class="hidden">
+<p>Please Choose a Year:</p>
+<ul id="year_list">
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="movie_clues_section" class="hidden">
+  <h3>Clues</h3>
+  <p id="movie_clues">append stuff in here</p>
+</div>
+
+
+
+
+
+<h1>Everything below this line is not valid</h1>
+
+
+<div id="movie_clues" class="hidden">
+<h1>Clues</h1>
+
+<p>Year: <%= @movie.year %></p>
+
+
+<% @movie.clues.split("\n").each do |clue| %>
+  <p><%= clue %></p>
+<% end %>
+
+<div id="actor_question" class="hidden">
+<form id="how_many_names">
+How Many Names Do You Want to See out of 
+<%= @movie.actors.length %>?
+<input type"text" name="number_of_names" id="number_of_names" autocomplete="off"/>
+
+<input type="submit" value="Show Names">
+</form>
+</div>
+
+<div id="actor_list" class="hidden">
+<p>Names:</p>
+<ul>
+<% @movie.actors.reverse.each do |actor| %>
+  <li class="actor hidden"><%= actor.name %></li>
+<% end %>
+</ul>
+</div>
+
+<div id="name_movie" class="hidden">
+<form id="guess_form">
+<input type="hidden" id="movie_name" value="<%= @movie.name %>"/>
+Name That Movie: <input type="text" name="name" id="user_guess" autocomplete="off">
+<input type="submit" value="Submit" id="submit_button">
+</form>
+</div>
+</div>

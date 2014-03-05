@@ -1,0 +1,45 @@
+<a href="/movies">Start Over</a>
+
+<p id="players_turn"></p>
+
+<p>Player 1 Score: <span id="total_points_1"></span></p>
+<p>Player 2 Score: <span id="total_points_2"></span></p>
+
+<div id="choose_category">
+  <p>Please Choose a Category:</p>
+  <ul id="category_list">
+  </ul>
+</div>
+
+<div id="choose_year" class="hidden">
+  <p>Please Choose a Year:</p>
+  <ul id="year_list">
+  </ul>
+</div>
+
+<div id="movie_clues" class="hidden">
+  <h3>Clues</h3>
+  <p id="clues"></p>
+</div>
+
+<div id="actor_question" class="hidden">
+  <form id="how_many_names">
+    How Many Names Do You Want to See out of <span id="max_actors"></span>?
+    <input type"text" name="number_of_names" id="number_of_names" autocomplete="off"/>
+
+    <input type="submit" value="Show Names">
+  </form>
+</div>
+
+<div id="actor_list" class="hidden">
+  <p>Names:</p>
+  <ul id="actors">
+  </ul>
+</div>
+
+<div id="name_movie" class="hidden">
+  <form id="guess_form">
+    Name That Movie: <input type="text" name="name" id="user_guess" autocomplete="off">
+    <input type="submit" value="Submit" id="submit_button">
+  </form>
+</div>
